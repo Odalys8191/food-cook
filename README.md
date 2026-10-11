@@ -1,10 +1,18 @@
-# Food Lab Cook · Ingredients to a meal
+# Food Cook · Cooking insights as reusable skills
 
 [简体中文](README.zh-CN.md) | English
 
-A Codex skill that turns ingredients you already have into a practical home-cooking plan. It asks about flavor and texture first, then recommends quantities, heat, timing, and observable signs of doneness.
+A collection of Codex cooking skills built from independently organized book insights and household applications. The repository can grow as more cooking books are studied; each skill records its sources and turns useful principles into cooking decisions.
 
-Inspired by the cooking principles discussed in J. Kenji López-Alt’s *The Food Lab*, this is an independent project with its own interaction flow and household applications. It is not an official companion or endorsed by the author or publisher. The skill and its reference notes are currently written in Chinese; this README provides English installation and usage guidance.
+The first skill, `food-lab-cook`, turns ingredients you already have into a practical home-cooking plan. It asks about flavor and texture first, then recommends quantities, heat, timing, and observable signs of doneness. It draws on principles discussed in J. Kenji López-Alt’s *The Food Lab* and uses its own interaction flow and household applications.
+
+This is an independent project, not an official companion or endorsed by the author or publisher. Skill instructions and reference notes are currently written in Chinese; this README provides English installation and usage guidance.
+
+## Available skills
+
+| Skill | Main reference | Purpose |
+| --- | --- | --- |
+| [food-lab-cook](skills/food-lab-cook/SKILL.md) | *The Food Lab*, J. Kenji López-Alt | Ingredients → flavor and texture preferences → practical cooking steps |
 
 ## Quick start
 
@@ -35,7 +43,7 @@ An illustrative conversation:
 
 If you already state your preferences, the skill uses them. You can also say “choose for me.”
 
-## What it does
+## What food-lab-cook does
 
 - Adapts the flavor question to the ingredients instead of offering a fixed menu.
 - Chooses a method around browning, tenderness, moisture, texture, available cookware, and time.
@@ -68,7 +76,15 @@ Primary inspiration: J. Kenji López-Alt, *The Food Lab: Better Home Cooking Thr
 
 Food-safety guidance is separately sourced from [FoodSafety.gov](https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures) and the [Hong Kong Centre for Food Safety](https://www.cfs.gov.hk/sc_chi/multimedia/multimedia_pub/multimedia_pub_fsf_139_04.html), checked on 2026-10-11. It serves a different purpose from texture-oriented cooking temperatures in the book.
 
-The skill format has been validated. Three simulated response scenarios checked preference-first behavior, explicit constraints, and ingredient-specific handling. These were response checks, not physical cooking trials; generated recipes still require judgment about actual ingredients and equipment.
+The `food-lab-cook` format has been validated. Three simulated response scenarios checked preference-first behavior, explicit constraints, and ingredient-specific handling. These were response checks, not physical cooking trials; generated recipes still require judgment about actual ingredients and equipment.
+
+## Adding insights from more books
+
+- Record the author, title, edition, and topic or page locator for each source. Keep source-derived principles distinct from this project's household adaptations.
+- Add a separate folder under `skills/` when a new book supports a distinct workflow. Extend an existing skill when the new material improves the same workflow, keeping attribution near the relevant rule.
+- Write concise decision guidance in new wording. Do not reproduce a book's chapter structure, narrative explanations, illustrations, or a comprehensive recipe collection.
+- Where sources disagree, state the ingredient, technique, or equipment conditions that explain the difference rather than inventing a universal rule.
+- Review each addition's publication rights and verify representative ingredient-and-preference scenarios. The current review does not clear future books or additions automatically.
 
 ## Copyright and publication boundary
 
@@ -78,9 +94,9 @@ Copyright distinguishes underlying ideas and methods from their expression. Cook
 
 The reviewed skill contains reworded principles and separately organized household applications; no book scans, illustrations, long quotations, or complete original-book recipes were identified. This review covered the skill files and publication boundaries; it did not compare the wording line by line with the original book. Rewording and attribution alone do not establish non-infringement. Under [China’s Copyright Law, Articles 13–16 and 24](https://zscqj.beijing.gov.cn/zscqj/zwgk/flfg18/436481084/index.html), adaptations and compilations must respect the original work’s rights, and personal-study exceptions do not give blanket permission for public redistribution.
 
-Publish only the files listed above. Exclude the book, cover images, scans, full OCR text, and unauthorized download links. This project is a cooking aid, not a replacement for the book.
+The assessment applies to the current `food-lab-cook` files only. Publish skill instructions, independently written references, and repository documentation. Exclude books, cover images, scans, full OCR text, and unauthorized download links. This project is a cooking aid, not a replacement for its source books.
 
-For this project’s first publication, use a fresh directory containing the clean release files and initialize a new repository there. Do not copy the working project’s `.git`: local snapshot objects include reference material. `.gitignore` prevents ordinary future additions but does not remove existing Git objects or history.
+Prepare releases from a clean directory containing only reviewed publication files. Keep private reading materials outside the publishable tree and do not import Git history containing them. `.gitignore` prevents ordinary future additions but does not remove existing Git objects or history.
 
 ## License status
 
