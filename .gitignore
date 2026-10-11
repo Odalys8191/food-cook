@@ -1,0 +1,11 @@
+# Private reference books are not publication assets.
+/*.pdf
+/*.epub
+/*.mobi
+/*.azw
+/*.azw3
+/private-sources/
+
+# Locally generated release packages.
+/release/
+.DS_Store

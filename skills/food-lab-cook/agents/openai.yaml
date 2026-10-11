@@ -1,0 +1,4 @@
+interface:
+  display_name: "厨房科学·食材到做法"
+  short_description: "根据现有食材先询问口味，再用厨房科学原则推荐家常做法与关键火候"
+  default_prompt: "使用 $food-lab-cook，我有鸡腿和蘑菇，请先问我的口味，再推荐做法。"
